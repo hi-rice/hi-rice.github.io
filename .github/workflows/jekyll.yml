@@ -35,7 +35,7 @@ jobs:
       - name: Install deps
         run: bundle install
 
-      - name: Install deps
+      - name: Install dependencies
         run: bundle install
 
       - name: Build
