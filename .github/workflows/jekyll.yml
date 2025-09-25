@@ -26,6 +26,15 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
 
+      - name: Force Ruby platform (skip native platform check)
+        run: bundle config set force_ruby_platform true
+
+      - name: Add Linux platform to lockfile (optional)
+        run: bundle lock --add-platform x86_64-linux || true
+
+      - name: Install deps
+        run: bundle install
+
       - name: Install deps
         run: bundle install
 
