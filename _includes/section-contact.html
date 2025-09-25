@@ -45,16 +45,17 @@
   </a>
   {% endif %}
 
-  {% if site.linkedin_username != null %}
+{% if site.linkedin_url %}
   <a class="social-link linkedin" aria-label="My LinkedIn" target="_blank" rel="noreferrer"
-    href="https://www.linkedin.com/in/{{site.linkedin_username}}">
+     href="{{ site.linkedin_url }}">
     <div class="social">
       <svg class="social-svg" viewBox="0 0 48 48">
-        <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#linkedin-in" | prepend: site.baseurl }}"></use>
+        <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48"
+             xlink:href="{{ "/assets/img/brands.svg#linkedin-in" | prepend: site.baseurl }}"></use>
       </svg>
     </div>
   </a>
-  {% endif %}
+{% endif %}
 
   {% if site.twitter_username != null %}
   <a class="social-link twitter" aria-label="My Twitter" target="_blank" rel="noreferrer"
