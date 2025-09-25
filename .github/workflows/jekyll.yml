@@ -2,7 +2,7 @@ name: Build and Deploy Jekyll to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # ← 기본 브랜치명에 맞춰 수정
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
